@@ -1,0 +1,56 @@
+.calendar-page {
+  width: 100vw;
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .calendar__main {
+    padding: 0 3vw 3vh 3vw;
+  }
+
+  .calendar__header {
+    margin-bottom: 20px;
+  }
+  .calendar__header__top {
+    display: flex;
+    flex-direction: row;
+    background-color: #bfe3f0;
+    padding: 17vh 3vw 3vh 3vw;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+    margin-bottom: 20px;
+  }
+  .calendar__header__bottom {
+    padding: 0 3vw 0 3vw;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
