@@ -1,48 +1,84 @@
 .calendar-page {
   width: 100vw;
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
+  .calendar {
+    &__container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-  }
 
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+    &__main {
+      display: flex;
+      flex: 1 1 0%;
+      padding: 0 3vw 3vh 3vw;
+    }
 
-  .App-link {
-    color: #61dafb;
-  }
+    &__month {
+      display: grid;
+      flex: 1 1 0%;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      grid-template-rows: repeat(5, minmax(0, 1fr));
+    }
 
-  .calendar__main {
-    padding: 0 3vw 3vh 3vw;
-  }
+    &__day {
+      &_circle {
+        background-color: rgb(37 99 235);
+        color: rgb(255 255 255);
+        border-radius: 100%;
+        width: 1.75rem;
+      }
+      &_container {
+        border-width: 1px;
+        border-color: rgb(229 231 235);
+        display: flex;
+        flex-direction: column;
+      }
+      &_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &_month {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-top: 0.25rem;
+      }
+      &_day {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 0.25rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        text-align: center;
+        &--active {
+          background-color: rgb(147 197 253);
+          color: rgb(255 255 255);
+          border-radius: 100%;
+          width: 1.75rem;
+        }
+      }
+      &_body {
+        display: flex;
+        flex: 1 1 0%;
+        flex-direction: column;
+        cursor: pointer;
+      }
+    }
 
-  .calendar__header {
-    margin-bottom: 20px;
-  }
-  .calendar__header__top {
-    display: flex;
-    flex-direction: row;
-    background-color: #bfe3f0;
-    padding: 17vh 3vw 3vh 3vw;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
-    margin-bottom: 20px;
-  }
-  .calendar__header__bottom {
-    padding: 0 3vw 0 3vw;
+    &__header {
+      margin-bottom: 20px;
+    }
+    &__header__top {
+      display: flex;
+      flex-direction: row;
+      background-color: #bfe3f0;
+      padding: 17vh 3vw 3vh 3vw;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+      margin-bottom: 20px;
+    }
+    &__header__bottom {
+      padding: 0 3vw 0 3vw;
+    }
   }
 
   @keyframes App-logo-spin {
